@@ -34,22 +34,26 @@ Deberás agregar las siguientes variables de entorno para que la aplicación pue
 4. **Configurar la base de datos**: En caso no quieras configurar las variables de entorno. Asegúrate de configurar tu archivo `application.properties` con las credenciales correctas para la conexión a la base de datos.
    Solo reemplaza las variables con tus credenciales.
    
-5. **Compilar y ejecutar la aplicación**:
+5. **Compilar y ejecutar la aplicación**
 
 
 # Para probar la API REST
 
 ## Agregar registros a tabla de usuarios
-    ```sh
-    INSERT INTO `foro_alura`.`usuarios` (`nombre`, `correo`, `contrasena`) VALUES ('usuario', 'usuario@alura.foro', '$2a$10$JZpsi8L8IlS77lnjHFcHau.uHaB0sTh7RHGXEOuD2Gm1ForWJJsIW');
-    ```
-    Las credenciales de ese usuario son : 
-      ```sh
-       {
-         "nombre":"usuario",
-         "contrasena":"123456"
-       }
-      ```
+
+```sh
+INSERT INTO 'foro_alura'.'usuarios' ('nombre', 'correo', 'contrasena') VALUES ('usuario', 'usuario@alura.foro', '$2a$10$JZpsi8L8IlS77lnjHFcHau.uHaB0sTh7RHGXEOuD2Gm1ForWJJsIW');
+```
+    
+Las credenciales de ese usuario son : 
+    
+```sh
+{
+ "nombre":"usuario",
+ "contrasena":"123456"
+}
+ ```
+      
 # End Points disponibles
 
 - **Nuevo Topico**: http://localhost:8080/topicos - Metodo POST
